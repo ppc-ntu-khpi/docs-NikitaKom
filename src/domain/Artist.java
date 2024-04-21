@@ -1,30 +1,77 @@
 package domain;
 
+
+ /**
+ * The class Artist extends employee
+ */ 
 public class Artist extends Employee {
 
-    public Artist(String[] skiils, String name, String jobTitle, int level, String dept) {
+
+/** 
+ *
+ * Artist
+ *
+ * @param skiils  the skiils. 
+ * @param name  the name. 
+ * @param jobTitle  the job title. 
+ * @param level  the level. 
+ * @param dept  the dept.
+ */
+    public Artist(String[] skiils, String name, String jobTitle, int level, String dept) { 
+
         super(name, jobTitle, level, dept);
         this.skiils = skiils;
     }
 
-    public Artist(String[] skiils) {
+
+/** 
+ *
+ * Artist
+ *
+ * @param skiils  the skiils.
+ */
+    public Artist(String[] skiils) { 
+
         super();
         this.skiils = skiils;
     }
     
-    public Artist() {
+
+/** 
+ *
+ * Artist
+ *
+ */
+    public Artist() { 
+
         super();
         this.skiils = new String[10];
     }
 
     @Override
-    public String toString() {
+
+/** 
+ *
+ * To string
+ *
+ * @return String
+ */
+    public String toString() { 
+
         return super.toString()+"\nSkills: "+getSkills();
     }
 
     private String[] skiils;
 
-    public String getSkills() {
+
+/** 
+ *
+ * Gets the skills
+ *
+ * @return the skills
+ */
+    public String getSkills() { 
+
         String s = "";
         for (String e : skiils) {
             s = s + e + ", ";
@@ -33,11 +80,27 @@ public class Artist extends Employee {
         return s;
     }
 
-    public void setSkills(String[] skills) {
+
+/** 
+ *
+ * Sets the skills
+ *
+ * @param skills  the skills. 
+ */
+    public void setSkills(String[] skills) { 
+
         this.skiils=skills;
     }
 
-    public String[] getSkillsLSist() {
+
+/** 
+ *
+ * Gets the skills L sist
+ *
+ * @return the skills L sist
+ */
+    public String[] getSkillsLSist() { 
+
         return skiils;
     }
 }
